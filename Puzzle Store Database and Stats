@@ -1,0 +1,26 @@
+CREATE TABLE puzzle_store(id INTEGER PRIMARY KEY, name TEXT, piece INTEGER, price INTEGER, brand TEXT); 
+
+INSERT INTO puzzle_store VALUES (1, "The Craft Cupboard", "1000", "$19.80", "Ravensburger");
+INSERT INTO puzzle_Store VALUES (2, "The Portal","1500", "$31.99","Ravensburger");
+INSERT INTO puzzle_Store VALUES (3, "Ice Cream Shop", "1500", "$27.99", "Ravensburger");
+INSERT INTO puzzle_Store VALUES (4, "Running Horses", "1000", "$14.99", "Clementoni");
+INSERT INTO puzzle_Store VALUES (5, "Novel Avenue", "2000", "$39.99", "Ravensburger");
+INSERT INTO puzzle_Store VALUES (6, "If Fish Could Walk", "2000", "$39.99", "Ravensburger");
+INSERT INTO puzzle_Store VALUES (7, "Hummingbird Garden", "1000", "$14.99", "Buffalo Games");
+INSERT INTO puzzle_Store VALUES (8, "Woodland Picnic", "500", "$14.99", "Galison");
+INSERT INTO puzzle_Store VALUES (9, "Beside the Sea", "500", "$14.99", "Galison");
+INSERT INTO puzzle_Store VALUES (10, "Butterflies of North America", "500", "$13.99", "Galison"); 
+INSERT INTO puzzle_Store VALUES (11, "Cats with Careers", "500", "$13.99", "Galison");
+INSERT INTO puzzle_Store VALUES (12, "Santorini Sunset", "300", "$20.99", "Ravensburger");
+INSERT INTO puzzle_Store VALUES (13, "Snail Mail", "300", "$13.99", "Re-marks Inc.");
+INSERT INTO puzzle_Store VALUES (14, "Dahlias", "750", "$19.95", "Frances Palmer");
+INSERT INTO puzzle_Store VALUES (15, "Puzzler's Place", "750", "$28.99", "Ravensburger");
+
+--display database ordered by price
+SELECT*FROM puzzle_store ORDER BY price desc;
+
+--How many pieces are in the largest puzzl?
+SELECT MAX(piece) from puzzle_store 
+
+--How many 500 piece puzzles are there?
+SELECT*from puzzle_store WHERE piece=500 
